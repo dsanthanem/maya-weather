@@ -1,5 +1,5 @@
 {
-  "name": "slack-bot-maya",
+  "name": "maya-time",
   "version": "1.0.0",
   "description": "Slack BOT named 'Maya'",
   "main": "server/service.js",

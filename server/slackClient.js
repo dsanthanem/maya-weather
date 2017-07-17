@@ -57,7 +57,7 @@ function addRtmMessageHandler(rtm, handler) {
 module.exports.init = function slackClient(botToken, logLevel, nlpClient) {
     rtm = new RtmClient(botToken, {logLevel: logLevel});
     nlp = nlpClient;
-    addAuthenticatedHandler(rtm, handleOnAuthenticated);
+    //addAuthenticatedHandler(rtm, handleOnAuthenticated);
     addRtmMessageHandler(rtm, handleOnRtmMessage);
     return rtm;
 };

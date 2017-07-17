@@ -10,9 +10,9 @@ const witClient = require('../server/witClient')(constants.WIT_API_TOKEN);
 
 const rtm = slackClient.init(constants.SLACK_BOT_TOKEN, constants.SLACK_LOG_LEVEL, witClient);
 rtm.start();
-slackClient.addAuthenticatedHandler(rtm, () => server.listen(3000));
+slackClient.addAuthenticatedHandler(rtm, () => server.listen(3010));
 
 server.on('listening', function () {
-    logger.info(`MAYA is listening on port ${server.address().port} in ${service.get('env')} mode...`)
+    logger.info(`MAYA-Time is listening on port ${server.address().port} in ${service.get('env')} mode...`)
 });
 
