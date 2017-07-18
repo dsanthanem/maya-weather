@@ -1,13 +1,13 @@
 {
   "name": "maya-time",
   "version": "1.0.0",
-  "description": "Slack BOT named 'Maya'",
+  "description": "Time Microservice for 'Maya'",
   "main": "server/service.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "hana",
+    "maya",
     "bot",
     "slack",
     "time",
@@ -16,8 +16,8 @@
   "author": "Dinesh Santhanem",
   "license": "ISC",
   "dependencies": {
-    "@slack/client": "^3.10.0",
     "express": "^4.15.3",
+    "moment": "^2.18.1",
     "superagent": "^3.5.2",
     "winston": "^2.3.1"
   }
