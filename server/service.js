@@ -35,9 +35,10 @@ service.get('/time/:location', (req, res, next) => {
             const results = response.body;
             const locationTime = timestamp + results.dstOffset + results.rawOffset;
             const timeFormatFull = 'dddd, MMMM Do YYYY h:mm:ss A';
-            //const timeFormatOnlyTime = 'h:mm:ss A';
-            const timeString = moment.unix(locationTime).utc().format(timeFormatFull);
-            res.json({result: timeString});
+            const timeFormatOnlyTime = 'h:mm:ss A';
+            const timeStringFull = moment.unix(locationTime).utc().format(timeFormatFull);
+            const timeStringOnlyTime = moment.unix(locationTime).utc().format(timeFormatOnlyTime);
+            res.json({result: {time: timeStringOnlyTime, dateTime: timeStringFull}});
 
         });
 
