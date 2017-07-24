@@ -11,17 +11,18 @@ server.listen(); // Omitting the port parameter tells NodeJs to choose an availa
 
 server.on('listening', function () {
 
-    logger.info(`MAYA-Time is listening on port ${server.address().port} in ${service.get('env')} mode...`)
+    logger.info(`MAYA-Weather is listening on port ${server.address().port} in ${service.get('env')} mode...`)
 
     const announce = () => {
-        request.put(`http://127.0.0.1:3010/service/time/${server.address().port}`, (err, res) => {
+        request.put(`http://127.0.0.1:3010/service/weather/${server.address().port}`, (err, res) => {
 
             if(err) {
                 logger.info(err);
                 logger.info('Error Connecting to Maya');
                 return;
+            } else {
+                logger.info('Maya-Weather connected to Maya');
             }
-            //logger.info(res.body);
 
         });
 
