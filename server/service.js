@@ -11,7 +11,7 @@ service.get('/weather/:location', (req, res, next) => {
     request.get('http://api.openweathermap.org/data/2.5/weather' +
         '?q=' + req.params.location +
         '&APPID=' + constants.OPEN_WEATHER_MAP_API_KEY +
-        '&units=metric', (err, response) => {
+        '&units=imperial', (err, response) => {
 
             if (err) {
                 console.log(err);
